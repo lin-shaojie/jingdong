@@ -1,0 +1,302 @@
+/*京东首页的CSS*/
+
+/*main 部分开始*/
+.jd {
+	/*height: 480px;*/
+	position: relative;
+}
+.jd-inner {
+	height: 480px;
+	position: relative;  /*层级问题，如果转换成absolute则需要写上宽*/
+	z-index: 999;
+
+}
+.jd-ad {
+	height: 480px;
+	background:url(../images/bg.png) no-repeat top center;
+	position: absolute;  /*加了绝对定位的盒子默认转换为行内块元素，里面内容大小决定宽度。所以需要加上宽度。*/
+	width: 100%;  /*必须加上才可以正常显示*/
+	top: 0;
+	left: 0;
+
+}	
+.jd-ad a {
+	/*撑满广告盒子，实现都可以点击*/
+	height: 480px;
+	width: 100%;
+	display: block;
+}
+/*-----------------------广告结束---------------------------*/
+.jd-clo1 {
+	width: 190px;
+	height: 480px;	
+	background-color: #6E6568;
+	float: left;
+	
+}
+.jd-clo2 {
+	width: 790px;
+	height: 480px;	
+/*	background: purple;*/
+	float: left;
+	margin-left: 10px;
+
+}
+.jd-clo3 {
+	width: 190px;
+	height: 480px;	
+	/*background: yellow;*/
+	float: right;
+
+}
+.jd-clo3 a {
+	font-size: 12px;
+    color: #747474;
+}
+.jd-clo1 ul {
+	margin-top: 15px;
+}
+.jd-clo1 li {
+	padding-left: 10px;
+	height: 28px;
+	line-height: 28px;
+}
+.jd-clo1 li a {
+	font-size: 14px;
+	color: #fff;
+}
+.jd-clo1 li a:hover {
+	color: #c81623;
+}
+.jd-clo1 li:hover {
+	background-color: #999395;
+}
+.jd-clo1 ul span {
+	font-size: 12px;
+	color: #fff;
+}
+
+.jd-clo2 .clo-hd {
+	height: 340px;
+	margin-bottom: 10px;
+	background: url(../images/);
+}
+.jd-clo2 .clo-bd div {
+	width: 390px;
+	height: 130px;
+	background-color: blue;
+	float: left;
+}
+.jd-clo2 .clo-bd div img {
+	width: 100%;  /*因为原图片太大，不限定大小的话会撑开盒子。所以加100%默认与父盒子一样大*/
+}
+.clo-bd-left {
+	margin-right: 10px;
+}
+.clo-hd {
+	position: relative;
+}
+/*轮播图 开始*/
+.arr-l,.arr-r {
+	width: 30px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.3);
+    font-family: "icomoon";
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    position: absolute;
+    top:50%;
+    margin-top: -30px;
+}
+.arr-r {
+	right: 0;
+}
+.clo-hd ol {
+	width: 180px;
+	height: 20px;
+	background: rgba(255, 255,255, 0.3);
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	margin-left: -80px;
+	border-radius: 10px;
+}
+.clo-hd ol li {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 50%;
+	float: left;
+	cursor: pointer;
+	margin: 3px 5px;
+
+}
+.clo-hd .current {
+	 background-color: #F10215;
+}
+
+.hi {
+	height: 95px;
+	
+	padding: 20px 15px 0;
+}
+.news {
+	height: 149px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 15px 0;
+}
+.user-info {
+	height: 40px;
+	padding-left: 54px;
+	font-size: 12px;
+    color: #747474;
+    line-height: 22px;
+    position: relative;
+}
+.user-info a {
+	font-size: 12px;
+	color: #747474;
+}
+.info-img {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top:0;
+	left: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.info-img img {
+	width: 100%;
+	height: auto;
+} 
+.user-profit {
+	margin-top: 15px;
+}
+.user-profit a {
+	width: 72px;
+	height: 20px;
+	border: 2px solid #F10215;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	display: inline-block;
+	color: #F10215;
+	margin-right: 1px;
+}
+.user-profit a:hover {
+	background-color: #F10215;
+	color: #fff;
+}
+
+.cuxiao {
+	border-right: 1px solid #ccc;
+	padding-right: 10px;
+}
+.tab-hd {
+	border-bottom: 1px solid #ccc;
+	padding: 3px 0 ;
+	position: relative;
+}
+.tab-hd a {
+	padding: 0 8px;
+}
+.tab-hd .more {
+	position: absolute;
+	top: 3px ;
+	right: 0;
+}
+.tab-hd .link{
+	width: 28px;
+    height: 2px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.tab-bd {
+	margin-top: 10px;
+}
+.tab-bd li {
+	height: 23px;
+    line-height: 23px;
+} 
+.tab-bd li a:hover {
+	color: #F10215;
+}
+
+.clo3-service {
+	width: 190px;
+	height: 209px;
+	overflow: hidden;
+}
+.clo3-service ul {
+	width: 200px;
+}
+.clo3-service li {
+	width: 47px;
+	height: 69px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+
+}
+.clo3-service i {
+	width: 24px;
+	height: 24px;
+	background: url(../images/sprite_fs@1x.png) no-repeat;
+	display: block;
+	margin: 15px auto 8px;
+}
+.clo3-service .hf i {
+	background-position: 0 -88px;
+}
+
+.clo3-service .jp i {
+	background-position: 0 -44px;
+}
+.clo3-service .jd i {
+	background-position: -44px -88px;
+}
+.clo3-service .hcp i {
+	background-position: -88px -88px;
+}
+.clo3-service .qyg i {
+	background-position: -88px -44px;
+}
+.clo3-service .jyk i {
+	background-position: 0 0;
+}
+.clo3-service .dyp i {
+	background-position: -44px -44px;
+}
+.clo3-service .yx i {
+	background-position: -88px 0;
+}
+.clo3-service .zc i {
+	background-position: -132px 0;
+}
+.clo3-service .lc i {
+	background-position: -132px -44px;
+}
+.clo3-service .lpk i {
+	background-position: -132px -88px;
+}
+.clo3-service .bt i {
+	background-position: -44px 0;
+}
+
+
+.clo3-service p {
+	text-align: center;
+}
+.clo3-service a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/*main 部分结束
